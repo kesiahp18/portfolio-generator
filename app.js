@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 const generatePage = require('./src/page-template.js');
+const { inherits } = require('util');
 
 const promptUser = () => {
 return inquirer
@@ -144,6 +145,5 @@ fs.writeFile('index.html', generatePage(portfolioData), err => {
 });
 
 });
-
 
 // .then(projectAnswers => console.log(projectAnswers));
